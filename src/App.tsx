@@ -7,7 +7,9 @@ function App() {
     <BrowserRouter>
       <RecoilRoot>
         <Routes>
-          <Route path='/' element={Form}/>
+        <Route path='/' element={Form}/>
+        <Route path='/' element={Form}/>
+        <Route path='/' element={Form}/>
         </Routes>
       </RecoilRoot>
     </BrowserRouter>
