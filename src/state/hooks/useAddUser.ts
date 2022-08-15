@@ -9,7 +9,10 @@ export const useAddUser = () => {
   return (nameUser: string) => {
     if (list.includes(nameUser)) {
       setError('Nomes duplicados não são permitidos.');
-      return list;
+      setTimeout(() => {
+        setError('');
+      }, 5000);
+      return;
     }
 
     return setList((list) => [...list, nameUser]);
