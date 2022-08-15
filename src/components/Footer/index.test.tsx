@@ -1,6 +1,7 @@
+import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react"
 import { RecoilRoot } from "recoil"
-import Footer from "."
+import Footer from "./index"
 import { useUsersList } from "../../state/hooks/useUsersList"
 
 jest.mock('../../state/hooks/useUsersList', () => {

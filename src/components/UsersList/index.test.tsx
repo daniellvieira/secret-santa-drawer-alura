@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react"
 import { RecoilRoot } from "recoil"
-import { useUsersList } from "../state/hooks/useUsersList"
-import UsersList from "./UsersList"
+import UsersList from "."
+import { useUsersList } from "../../state/hooks/useUsersList"
 
-jest.mock('../state/hooks/useUsersList', () => {
+jest.mock('../../state/hooks/useUsersList', () => {
   return { useUsersList: jest.fn() }
 })
 

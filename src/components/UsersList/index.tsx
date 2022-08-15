@@ -1,4 +1,4 @@
-import { useUsersList } from '../state/hooks/useUsersList';
+import { useUsersList } from "../../state/hooks/useUsersList";
 
 const UsersList = () => {
   const users: string[] = useUsersList();

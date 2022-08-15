@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 import { RecoilRoot } from "recoil";
-import Form from "./Form";
+import Form from ".";
 
 // AAA (Arrange, Act and Assert em inglês).
 test('um nome que que descreve o que vamos testar', () => {
