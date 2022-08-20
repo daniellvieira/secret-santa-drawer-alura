@@ -9,10 +9,15 @@ jest.mock('../../state/hooks/useUsersList', () => {
 })
 
 const mockNavigation = jest.fn();
+const mockDraw = jest.fn();
+
 jest.mock('react-router-dom', () => {
   return { useNavigate: () => mockNavigation }
 })
 
+jest.mock('../../state/hooks/useDrawer', () => {
+  return { useDrawer: () => mockDraw }
+})
 
 describe('when it is less than 3 users in list', () => {
   beforeEach(() => {
@@ -51,5 +56,6 @@ describe('when it has 3 or more user in list', () => {
 
     expect(mockNavigation).toHaveBeenCalledTimes(1);
     expect(mockNavigation).toHaveBeenCalledWith('/draw');
+    expect(mockDraw).toHaveBeenCalledTimes(1);
   })
 })
