@@ -29,6 +29,7 @@ const Draw = () => {
           value={userOfTheTurn}
           onChange={event => setUserOfTheTurn(event.target.value)}
         >
+          <option value="">Selecione seu nome</option>
           { users.map(user => (
             <option key={user}>{user}</option>
           )) }

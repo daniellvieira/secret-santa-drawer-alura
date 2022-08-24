@@ -29,7 +29,7 @@ describe('the page of draw', () => {
     render(<RecoilRoot><Draw /></RecoilRoot>)
 
     const options = screen.queryAllByRole('option');
-    expect(options).toHaveLength(users.length);
+    expect(options).toHaveLength(users.length + 1);
   })
 
   test('', () => {
