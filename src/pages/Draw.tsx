@@ -1,8 +1,11 @@
 import { useState } from "react";
+import Card from "../components/Card";
 import { useResultDraw } from "../state/hooks/useResultDraw";
 import { useUsersList } from "../state/hooks/useUsersList";
 
-const Raffle = () => {
+import './Draw.css'
+
+const Draw = () => {
   const users = useUsersList();
   const result = useResultDraw();
 
@@ -15,7 +18,8 @@ const Raffle = () => {
   }
 
   return (
-    <section>
+    <section className="draw">
+      <h2>Quem vai tirar o papelzinho?</h2>
       <form onSubmit={makeDraw}>
         <select
           required
@@ -29,12 +33,17 @@ const Raffle = () => {
             <option key={user}>{user}</option>
           )) }
         </select>
-
-        <button>Sortear</button>
+        <p>Clique em em sortear para ver quem é seu amigo secreto!</p>
+        <button className="button-drawer">Sortear</button>
       </form>
-      { secretSanta && <p role='alert'>{secretSanta}</p>}
+      { secretSanta &&
+        <p className="result" role='alert'>{secretSanta}</p>
+      }
+      <footer className="draw">
+        <img src="/images/aviao.png" className="aviao" alt="Um desenho de um avião de papel" />
+      </footer>
     </section>
   )
 }
 
-export default Raffle;
+export default Draw;

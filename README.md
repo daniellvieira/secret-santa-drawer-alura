@@ -9,3 +9,7 @@
 ### Test
 
 [Running Tests Documentation](https://create-react-app.dev/docs/running-tests/)
+
+[Expect Jest](https://jestjs.io/pt-BR/docs/expect)
+
+[Jest DOM](https://github.com/testing-library/jest-dom)
