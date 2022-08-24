@@ -17,3 +17,5 @@ This project is accessible by Vercel at [this page](https://secret-santa-drawer-
 [Expect Jest](https://jestjs.io/pt-BR/docs/expect)
 
 [Jest DOM](https://github.com/testing-library/jest-dom)
+
+[Testing Library](https://testing-library.com/docs/queries/about/)
